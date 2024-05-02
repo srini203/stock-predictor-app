@@ -20,9 +20,9 @@ period = n_years * 365
 
 @st.cache_data
 def load_data(ticker):
-    data = yf.download(ticker, START, TODAY)
-    data.reset_index(inplace=True)
-    return data
+    data_load = yf.download(ticker, START, TODAY)
+    data_load.reset_index(inplace=True)
+    return data_load
 
 
 data_load_state = st.text("Load Data...")
